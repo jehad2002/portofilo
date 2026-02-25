@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Cairo",sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#1e293b,#020617);
+}
+
+header h1{
+    font-size:50px;
+}
+
+header span{
+    color:#38bdf8;
+}
+
+header p{
+    margin-top:15px;
+    font-size:20px;
+    opacity:.8;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 30px;
+    border:none;
+    background:#38bdf8;
+    color:black;
+    font-weight:bold;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:32px;
+}
+
+/* Experience Section */
+.experience {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+@media (max-width: 1000px) {
+    .experience {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .experience {
+        grid-template-columns: 1fr;
+    }
+}
+
+.experience .card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s, background 0.3s;
+    text-align: center;
+}
+
+.experience .card:hover {
+    transform: translateY(-10px);
+    background: #334155;
+}
+
+.experience .card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+.skills, .projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+@media (max-width: 1000px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 650px) {
+    .projects {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#334155;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+.contact{
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    margin-top:40px;
+    opacity:.7;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1> Hi, i'm <span>jehad</span></h1>
+    <p>Full Stack Developer</p>
+    <p>(CIS) Computer Information Syster</p>
+    <button class="btn" onclick="scrollToSection()"> View my work</button>
+</header>
+
+<section id="about">
+    <h2 class="title">who am i </h2>
+    <p style="text-align:center;max-width:700px;margin:auto;">
+        A web developer specialized in building modern and fast applications using the latest technologies. I enjoy solving programming problems and designing professional user interfaces.
+    </p>
+</section>
+
+<section>
+    <h2 class="title">my skills </h2>
+    <div class="skills">
+        <div class="card"><h3>Frontend</h3><p>HTML, CSS, JS, React</p></div>
+        <div class="card"><h3>Backend</h3><p>Node.js, Rust, Go, C, C++</p></div>
+        <div class="card"><h3>Database</h3><p>MySQL, SQLite</p></div>
+        <div class="card"><h3>Tools</h3><p>Git, Docker, Linux</p></div>
+    </div>
+</section>
+
+<section>
+    <h2 class="title">Experience & Education</h2>
+    <div class="experience">
+        <div class="card">
+            <h3>Bachelor in Computer Information System</h3>
+            <p>Al-Quds Open University</p>
+        </div>
+        <div class="card">
+            <h3>Full Stack Development</h3>
+            <p>University of Noterdam – Courses in Go, JavaScript, Rust</p>
+        </div>
+        <div class="card">
+            <h3>Afac-College</h3>
+            <p>medical scertery</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="title">my projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Follow-Friend</h3>
+            <p>This project is a full-stack social networking platform built with a structured architecture:
+
+🔹 Frontend: Developed using Next.js, featuring pages such as login, profile, posts, chat, and groups, along with reusable components and CSS styling.
+
+🔹 Backend: Built with Go, including controllers, models, middleware, and API routes to manage users, posts, comments, notifications, and messaging.
+
+🔹 Database: Uses SQLite with migrations for database schema management.
+
+🔹 Features:
+User registration and authentication, post creation, comments, follow system, notifications, real-time chat, and profile management.
+
+📌 In short:
+It’s a complete social media system similar to modern platforms, designed with a clean separation between frontend and backend and built to be scalable and maintainable.</p>
+        </div>
+
+        <div class="card">
+            <h3>Smart-Road</h3>
+            <p>This project is a smart intersection simulation developed in Rust that models vehicles approaching from four directions (east, west, north, and south) and calculates their remaining distance before entering the intersection based on their coordinates. It uses SDL2 libraries for graphics rendering to display vehicle movement interactively and allows testing traffic logic, collision handling, and vehicle behavior within the intersection.
+
+In short:
+It’s a traffic simulation system designed to test vehicle-control algorithms at an intersection without traffic lights, with dynamic visual movement.</p>
+        </div>
+
+        <div class="card">
+            <h3>Net-Cat</h3>
+            <p>This project is a multi-user TCP chat server written in Go, allowing users to connect over the network and send/receive messages in real-time.
+
+🔹 Supports unique usernames for each user and allows name changes during the chat.
+
+🔹 Maintains a log of all messages and displays them when a new user joins.
+
+🔹 Sends notifications when users join or leave the chat room.
+
+🔹 Allows safe server shutdown using the “exit” command.
+
+📌 In short:
+It’s a simple and efficient TCP chat system that handles multiple connections concurrently and keeps a persistent message history.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mini-Framework</h3>
+            <p>This project is a mini web framework using Node.js and lite-server to quickly run a local web application during development.
+
+🔹 Provides a lightweight and fast environment for testing HTML/CSS/JS pages.
+
+🔹 The local server can be started with npm start.
+
+🔹 Supports automatic page reload on file changes (Live Reload).
+
+📌 In short:
+It’s a simple and fast web development setup using Node.js and lite-server for easy testing and development of web pages.</p>
+        </div>
+
+        <div class="card">
+            <h3>LemIn</h3>
+            <p>This project is a simulation of ants moving through paths in a graph, implemented in Go. It:
+
+Reads the rooms, connections, and number of ants from an input file.
+
+Generates all possible paths from the start room to the end room.
+
+Distributes the ants across the paths efficiently to ensure fast traversal.
+
+Displays the movement of each ant step by step until they reach the end.
+
+📌 In short:
+It’s a simulation system that models ant distribution across multiple paths in a graph, tracking each ant’s movement to the destination.</p>
+        </div>
+
+        <div class="card">
+            <h3>ATM-Management System</h3>
+            <p>This project is a file-based ATM management system written in C.
+
+🔹 Supports user accounts with passwords.
+
+🔹 Allows updating user and bank account information.
+
+🔹 Enables withdrawals, deposits, account deletion, and transferring account ownership.
+
+📌 In short:
+It’s a complete ATM simulator managing multiple users and banking operations through file storage.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 jehad
+</footer>
+
+<script>
+function scrollToSection(){
+    document.getElementById("about").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
